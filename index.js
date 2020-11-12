@@ -2,7 +2,7 @@ const fastify = require('fastify');
 const f = fastify();
 
 f.get('*', (req, res) => {
-  res.header('Content-Type', 'text/html').send(`
+  res.header('Content-Type', 'text/html').code(200).send(`
       <body>
         <span>
           eli is too lazy to make his site so were just gonna redirect you to his twitter in 
