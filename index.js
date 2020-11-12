@@ -1,7 +1,7 @@
 const fastify = require('fastify');
 const f = fastify();
 
-f.get('*', (req, res) => {
+f.all('*', (req, res) => {
   res.header('Content-Type', 'text/html').code(200).send(`
       <body>
         <span>
