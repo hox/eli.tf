@@ -4,21 +4,43 @@ export default function Home() {
   return (
     <div className='container'>
       <Head>
-        <title>Create Next App</title>
+        <title>Elias Hernandez</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-
+      <video src='/earth.mp4' className='background-video'></video>
       <main>
         <div>
           <h1>Elias Hernandez</h1>
+          <span id='bio'>
+            Astro-photographer &bull; Backend Developer &bull; Flordia man 🌴
+          </span>
+          <hr></hr>
+          <div className='buttons'>
+            <a className='button' href='https://go.eli.tf/twitter'>
+              Twitter
+            </a>
+            <a className='button' href='https://go.eli.tf/github'>
+              GitHub
+            </a>
+            <a className='button' href='https://go.eli.tf/discord'>
+              Discord
+            </a>
+            <a className='button' href='https://go.eli.tf/twitch'>
+              Twitch
+            </a>
+            <a className='button' href='https://go.eli.tf/snapchat'>
+              Snapchat
+            </a>
+            <a className='button' href='https://go.eli.tf/youtube'>
+              YouTube
+            </a>
+          </div>
         </div>
       </main>
 
       <footer>
-        <span>Made with ♥ by</span>
-        <a href='https://go.eli.tf/twitter'>Eli</a>
-        <span>&#8226;</span>
-        <a href='https://github.com/hox/eli.tf'>Source</a>
+        <span>Background &copy; NASA &mdash;</span>
+        <a href='https://github.com/hox/eli.tf'>Source Code</a>
       </footer>
 
       <style jsx>{`
@@ -26,9 +48,37 @@ export default function Home() {
           min-height: 100vh;
           padding: 0 0.5rem;
           display: flex;
+          text-align: center;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+           {
+            /* background-image: url('/earth.mp4');
+          background-position: center;
+          background-size: cover;
+          background-attachment: fixed;
+          background-origin: initial;
+          background-clip: initial;
+          background-repeat: no-repeat; */
+          }
+          color: #eeeeee;
+        }
+
+        .background-video {
+          position: absolute;
+          height: 100%;
+          z-index: -1;
+          filter: blur(3px);
+        }
+
+        .button {
+          padding: 7px 10px;
+          margin: 0 5px;
+        }
+
+        .button:hover {
+          background-color: rgba(0, 0, 0, 0.5);
+          transition-duration: 0.1s;
         }
 
         main {
@@ -40,10 +90,22 @@ export default function Home() {
           align-items: center;
         }
 
+        main h1 {
+          margin: 5px;
+        }
+
+        main #bio {
+          margin: 0 15px;
+        }
+
+        main hr {
+          margin: 15px;
+        }
+
         footer {
           width: 100%;
-          height: 40px;
-          border-top: 1px solid #eaeaea;
+          margin-bottom: 10px;
+          font-size: 14px;
           display: flex;
           justify-content: center;
           align-items: center;
