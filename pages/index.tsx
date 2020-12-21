@@ -7,7 +7,11 @@ export default function Home() {
         <title>Elias Hernandez</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <video src='/earth.mp4' className='background-video'></video>
+
+      <video autoPlay muted loop id='background-video'>
+        <source src='/earth.mp4' type='video/mp4'></source>
+      </video>
+
       <main>
         <div>
           <h1>Elias Hernandez</h1>
@@ -16,22 +20,22 @@ export default function Home() {
           </span>
           <hr></hr>
           <div className='buttons'>
-            <a className='button' href='https://go.eli.tf/twitter'>
+            <a className='button' href='/twitter'>
               Twitter
             </a>
-            <a className='button' href='https://go.eli.tf/github'>
+            <a className='button' href='/github'>
               GitHub
             </a>
-            <a className='button' href='https://go.eli.tf/discord'>
+            <a className='button' href='/discord'>
               Discord
             </a>
-            <a className='button' href='https://go.eli.tf/twitch'>
+            <a className='button' href='/twitch'>
               Twitch
             </a>
-            <a className='button' href='https://go.eli.tf/snapchat'>
+            <a className='button' href='/snapchat'>
               Snapchat
             </a>
-            <a className='button' href='https://go.eli.tf/youtube'>
+            <a className='button' href='/youtube'>
               YouTube
             </a>
           </div>
@@ -52,23 +56,19 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-           {
-            /* background-image: url('/earth.mp4');
-          background-position: center;
-          background-size: cover;
-          background-attachment: fixed;
-          background-origin: initial;
-          background-clip: initial;
-          background-repeat: no-repeat; */
-          }
           color: #eeeeee;
         }
 
-        .background-video {
-          position: absolute;
-          height: 100%;
-          z-index: -1;
-          filter: blur(3px);
+        #background-video {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          z-index: -100;
+          transform: translate(-50%, -50%);
         }
 
         .button {
@@ -88,6 +88,8 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+
+          overflow: hidden;
         }
 
         main h1 {
