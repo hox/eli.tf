@@ -35,9 +35,11 @@ export default function Home() {
             <a className='button' href='/snapchat'>
               Snapchat
             </a>
+            <!--
             <a className='button' href='/youtube'>
               YouTube
             </a>
+            -->
           </div>
         </div>
       </main>
