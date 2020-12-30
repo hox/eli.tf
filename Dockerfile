@@ -1,5 +1,7 @@
 FROM node:alpine
 
+LABEL org.opencontainers.image.source https://github.com/hox/eli.tf
+
 RUN mkdir -p /usr/src/app
 
 ENV PORT 80
