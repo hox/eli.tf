@@ -1,7 +1,0 @@
-node_modules
-.next
-.gitignore
-Dockerfile
-.prettierrc
-next-env.d.ts
-tsconfig.json
