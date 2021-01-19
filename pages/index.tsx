@@ -16,7 +16,7 @@ export default function Home() {
         <div>
           <h1>Elias Hernandez</h1>
           <span id='bio'>
-            Astro-photographer &bull; Backend Developer &bull; Flordia man 🌴
+            Astro-photographer &bull; Space Enthusiast &bull; Backend Developer
           </span>
           <hr></hr>
           <div className='buttons'>
@@ -28,9 +28,6 @@ export default function Home() {
             </a>
             <a className='button' href='/discord'>
               Discord
-            </a>
-            <a className='button' href='/twitch'>
-              Twitch
             </a>
             <a className='button' href='/snapchat'>
               Snapchat
