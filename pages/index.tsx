@@ -44,6 +44,12 @@ export default function Home() {
         <a href='https://github.com/hox/eli.tf'>Source Code</a>
       </footer>
 
+      <script
+        defer
+        src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "7812e47fdd8447a4b4f9571070b7e77f"}'
+      ></script>
+
       <style jsx>{`
         .container {
           min-height: 100vh;
