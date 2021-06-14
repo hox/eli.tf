@@ -26,9 +26,6 @@ export default function Home() {
             <a className='button' href='/github'>
               GitHub
             </a>
-            <a className='button' href='/snapchat'>
-              Snapchat
-            </a>
           </div>
         </div>
       </main>
