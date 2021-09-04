@@ -12,6 +12,10 @@
   background-position: center;
 }
 
+.hero .title {
+  font-weight: 700;
+}
+
 @media (min-width: 855px) {
   .hero {
     display: flex;
