@@ -2,21 +2,14 @@ FROM node:alpine
 
 LABEL org.opencontainers.image.source https://github.com/hox/eli.tf
 
-RUN mkdir -p /usr/src/app
+WORKDIR /opt/app
 
-ENV PORT 80
+COPY package*.json ./
 
-WORKDIR /usr/src/app
+RUN npm install
 
-COPY package.json /usr/src/app
-COPY package-lock.json /usr/src/app
-
-RUN npm install --production && npm install --save-dev typescript @types/react @types/node
-
-COPY . /usr/src/app
+COPY . .
 
 RUN npm run build
 
-EXPOSE 80
-
-CMD [ "npm", "start" ]
+CMD ["npm", "start"]
