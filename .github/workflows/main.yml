@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@master
   deployment:
     runs-on: ubuntu-latest
-    needs: docker-build
+    needs: build
     steps:
       - uses: raptorhq/cloudflared-tunnel-kubectl@v1
         name: Deploy to cluster
