@@ -1,5 +1,4 @@
-
-name: CI
+name: Deployment
 
 on:
   push:
@@ -32,9 +31,9 @@ jobs:
     steps:
       - uses: raptorhq/cloudflared-tunnel-kubectl@v1
         name: Deploy to cluster
-        env: 
+        env:
           cloudflared_service_token_id: ${{ secrets.TOKEN_ID }}
           cloudflared_service_token_secret: ${{ secrets.TOKEN_SECRET }}
-          cloudflared_host_address: "k8s.mrln.link"
+          cloudflared_host_address: 'k8s.mrln.link'
           kubeconfig: ${{ secrets.KUBECONFIG }}
           kubectl_args: set image deploy/eli-web eli-web=ghcr.io/${{ github.repository }}:${{ github.sha }}
