@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { Github, Instagram, Twitter } from '@icons-pack/react-simple-icons';
 import Link from 'next/link';
 
