@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:18-alpine-slim
 
 LABEL org.opencontainers.image.source https://github.com/hox/eli.tf
 
