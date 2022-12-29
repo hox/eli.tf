@@ -1,15 +1,11 @@
-FROM node:18-alpine
+FROM denoland/deno:1.26.0
 
 LABEL org.opencontainers.image.source https://github.com/hox/eli.tf
 
 WORKDIR /opt/app
 
-COPY package*.json ./
-
-RUN npm install
-
 COPY . .
 
-RUN npm run build
+RUN deno cache main.ts
 
-CMD ["npm", "start"]
+CMD ["run", "-A", "--allow-net", "--allow-run", "main.ts"]
