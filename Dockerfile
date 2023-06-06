@@ -1,4 +1,4 @@
-FROM denoland/deno:1.26.0
+FROM denoland/deno:1.32.0
 
 LABEL org.opencontainers.image.source https://github.com/hox/eli.tf
 
