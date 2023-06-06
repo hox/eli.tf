@@ -1,9 +1,9 @@
 import { AppProps } from '$fresh/server.ts';
 import { Head } from '$fresh/runtime.ts';
-import { apply, tw } from 'twind';
+import { tw } from 'twind';
 import { css } from 'twind/css';
 
-const globals = css({
+export const globals = css({
   ':global': {
     body: {
       fontFamily: ['Urbanist'],
@@ -44,7 +44,7 @@ export default function App({ Component }: AppProps) {
           rel='stylesheet'
         />
       </Head>
-      <div class={tw`m-0 p-0 h-full w-full ${globals}`}>
+      <div class={tw`m-0 p-0 h-full w-full`}>
         <Component />
       </div>
     </>
