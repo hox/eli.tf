@@ -4,15 +4,15 @@ import { globals } from './_app.tsx';
 
 const links = [
   {
-    name: 'twitter',
+    href: 'https://twitter.com/hoxeli',
     Icon: SiTwitter,
   },
   {
-    name: 'github',
+    href: 'https://github.com/hox',
     Icon: SiGithub,
   },
   {
-    name: 'instagram',
+    href: 'https://instagram.com/eli.tsx',
     Icon: SiInstagram,
   },
 ];
@@ -31,10 +31,10 @@ export default () => (
         </span>
       </div>
       <div class='flex'>
-        {links.map(({ name, Icon }) => (
+        {links.map(({ href, Icon }) => (
           <div class='mx-3 hover:cursor-pointer hover:text-gray-300 duration-100'>
-            <a href={'https://go.eli.tf/' + name}>
-              <Icon alt={name} class='w-[40px] h-[35px] stroke-0' />
+            <a href={href}>
+              <Icon alt={href} class='w-[40px] h-[35px] stroke-0' />
             </a>
           </div>
         ))}
