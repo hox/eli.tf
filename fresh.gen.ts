@@ -2,20 +2,18 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import config from './deno.json' assert { type: 'json' };
-import * as $0 from './routes/_app.tsx';
-import * as $1 from './routes/discord-usernames.tsx';
-import * as $2 from './routes/index.tsx';
-import * as $$0 from './islands/usernames-modal.tsx';
+import config from "./deno.json" assert { type: "json" };
+import * as $0 from "./routes/_app.tsx";
+import * as $1 from "./routes/index.tsx";
+import * as $$0 from "./islands/usernames-modal.tsx";
 
 const manifest = {
   routes: {
-    './routes/_app.tsx': $0,
-    './routes/discord-usernames.tsx': $1,
-    './routes/index.tsx': $2,
+    "./routes/_app.tsx": $0,
+    "./routes/index.tsx": $1,
   },
   islands: {
-    './islands/usernames-modal.tsx': $$0,
+    "./islands/usernames-modal.tsx": $$0,
   },
   baseUrl: import.meta.url,
   config,
